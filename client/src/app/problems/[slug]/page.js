@@ -22,7 +22,7 @@ export default function ProblemPage() {
     const loadProblem = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/problems/${slug}`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/problems/${slug}`
         );
 
         const data = await response.json();

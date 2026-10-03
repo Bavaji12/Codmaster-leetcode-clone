@@ -18,8 +18,7 @@ export default function ProblemsPage() {
   const fetchProblems = async () => {
     try {
       setLoading(true);
-
-      let url = "http://localhost:5000/api/problems";
+let url = `${process.env.NEXT_PUBLIC_API_URL}/api/problems`;
 
       const params = new URLSearchParams();
 
